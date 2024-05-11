@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 /**Nested html structure
  *
  * <div id="parent">
@@ -13,18 +15,12 @@
  *
  *ReactElement(object)=> HTML(Browser Understands)
  *
- *
- *
- *
- *
- *
- *
  */
 
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "I an h1 tag"),
-    React.createElement("h2", {}, "I an h2 tag"),
+    React.createElement("h1", {}, "This is Namaste React🚀"),
+    React.createElement("h2", {}, "by Akshay Saini"),
   ]),
   React.createElement("div", { id: "child2" }, [
     React.createElement("h1", {}, "I an h1 tag"),
