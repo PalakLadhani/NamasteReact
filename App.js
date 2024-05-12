@@ -1,40 +1,37 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-/**Nested html structure
- *
- * <div id="parent">
- *      <div id"child">
- *           <h1>"I am h1 tag</h1>
- *           <h2>"I am h2 tag</h2>
-*      </div>
-<div id"child2">
- *           <h1>"I am h1 tag</h1>
- *           <h2>"I am h2 tag</h2>
-*      </div>
- * </div>
- *
- *ReactElement(object)=> HTML(Browser Understands)
- *
- */
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "This is Namaste React🚀"),
-    React.createElement("h2", {}, "by Akshay Saini"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I an h1 tag"),
-    React.createElement("h2", {}, "I an h2 tag"),
-  ]),
-]);
+//React.createElement=>ReactElement-JS object=>HTMLElement(render)
 
-//JSX
+// const heading = React.createElement("h1", { id: "heading" }, "Namaste React🚀");
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Hello World from React!"
-// );
-console.log(parent); //object
+// console.log(heading);
+
+//JSX-is not HTML in JS
+// JSX-HTML-LIKE or XML-LIKE  SYNTAX
+// JSX (transpiled before it reaches the JS)-PARCEL-Babel
+// JSX=> Babel transpiles to Reac t.createElement=>ReactElement-JS object=>HTMLElement(render)
+
+// React Element
+// const jsxHeading =(<h1 id="heading">Namaste React using JSX🚀</h1>) ;
+const heading = <h1 id="heading">Namaste React using JSX🚀</h1>;
+
+// React Functional Components
+// Component Composition
+const Title = () => <h1>Namaste React using JSX🚀</h1>;
+
+// Same above and below syntax
+
+const HeadingComponent = () => (
+  <div id="conatiner">
+    {/* <Title />
+    <Title></Title> */}
+    {Title()}
+    {/* we can write it so many times that above thing and above all are same things  */}
+    <h1>Namaste React Functional Component</h1>
+  </div>
+);
+
+// <HeadingComponent
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeadingComponent />);
