@@ -1,3 +1,6 @@
+import RestaurantCard from "./RestaurantCard";
+import React, { useEffect, useState } from "react";
+
 const Body = () => {
   const [restaurants, setRestaurants] = useState(null);
 
@@ -21,3 +24,4 @@ const Body = () => {
     </div>
   );
 };
+export default Body;

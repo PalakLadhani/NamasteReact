@@ -17,3 +17,4 @@ const RestaurantCard = ({ resData }) => {
     </div>
   );
 };
+export default RestaurantCard;
