@@ -1,10 +1,3 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-const port = 3001;
-
-app.use(cors());
-
 const restaurantData = [
   {
     type: "restaurant",
@@ -1823,10 +1816,4 @@ const restaurantData = [
   },
 ];
 
-app.get("/restaurant", (req, res) => {
-  res.json(restaurantData);
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+export default restaurantData;
